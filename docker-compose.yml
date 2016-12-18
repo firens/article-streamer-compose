@@ -39,6 +39,9 @@ services:
     image: firens/streamer-webapp:0.0.1
     ports:
          - "8080:8080"
+    env_file: ./docker-env.list
+    environment:
+          DATA_SERVER_HOST: data_server:8000
 
   kafka:
     container_name: kafka
