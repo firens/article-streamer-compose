@@ -15,3 +15,6 @@ To run docker-compose up , might need to use sudo or add myself to group
 ``` 
 $ usermod -aG docker ${USER}
 ```
+
+To edit files inside docker might need to use (if Nano not responding): 
+docker exec -it score_updater /bin/bash -c "export TERM=xterm; exec bash"
